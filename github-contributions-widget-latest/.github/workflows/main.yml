@@ -1,0 +1,14 @@
+name: JsDelivrCDNPurge
+
+on:
+  push
+
+jobs:
+  purge-jsdelivr-cache:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          url: |
+            https://cdn.jsdelivr.net/gh/imananoosheh/github-contributions-fetch@latest/github_calendar_widget.js
+            https://cdn.jsdelivr.net/gh/imananoosheh/github-contributions-fetch@latest/githubcalendarwidget.min.js
